@@ -1,0 +1,1446 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Explore GMon evolution lines, with Pokédex entries, abilities, artwork, and stats when available.">
+  <title>GMon Dex — GMon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261107-15">
+  <script src="app.js" defer></script>
+  <script src="gmon-types.js" defer></script>
+  <script src="gmon-detail.js" defer></script>
+</head>
+<body class="dex-page">
+  <div class="dex-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="GMon home">
+        <span class="wordmark-icon" aria-hidden="true">G</span>
+        <span>GM<span class="wordmark-accent">ON</span></span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="site-nav-link" href="index.html" data-page-transition>Home</a>
+          <a class="site-nav-link is-current" href="gmon.html" aria-current="page" data-page-transition>GMon Archive</a>
+          <a class="site-nav-link" href="chart.html" data-page-transition>Type Matchups</a>
+        </nav>
+        <a class="home-return" href="gmon.html#first-gmon" data-archive-link data-page-transition><span aria-hidden="true">←</span> Back to Archive</a>
+        <div class="theme-switcher" role="group" aria-label="Choose a color theme">
+          <button class="theme-button is-active" type="button" data-theme-choice="light" aria-label="Light theme" aria-pressed="true"><span class="theme-dot theme-dot-light"></span></button>
+          <button class="theme-button" type="button" data-theme-choice="dark" aria-label="Dark theme" aria-pressed="false"><span class="theme-dot theme-dot-dark"></span></button>
+          <button class="theme-button" type="button" data-theme-choice="alternate" aria-label="Alternate theme" aria-pressed="false"><span class="theme-dot theme-dot-alternate"></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="dex-intro" aria-labelledby="dex-page-title">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> GMON FIELD GUIDE · NO. <span id="dex-entry-number">001</span></p>
+          <h1 id="dex-page-title">The <span id="selected-stage-name">first GMon.</span></h1>
+          <p class="dex-subtitle">Explore the GMon evolution lines.</p>
+        </div>
+        <span class="dex-classification" aria-label="Types">
+          <span class="classification-type type-label" data-type-name="Dragon">Dragon</span>
+          <span class="classification-separator" aria-hidden="true">×</span>
+          <span class="classification-type type-label" data-type-name="Fairy">Fairy</span>
+        </span>
+      </section>
+
+      <section class="dex-profile" data-stage="wyrmlit" data-entry-number="001" data-types="Dragon,Fairy" data-line="wyrmlit" aria-labelledby="dex-name-wyrmlit">
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/wyrmlit-front.png?v=20261107-2" alt="Wyrmlit, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—001</span><span>STAGE 01 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE WISH TAIL POKÉMON</p>
+          <h2 id="dex-name-wyrmlit">Wyrmlit</h2>
+          <p class="evolution-types" aria-label="Dragon and Fairy types">
+            <span class="evolution-type-chip type-dragon" data-type-name="Dragon"><span aria-hidden="true">♧</span><span class="type-label">Dragon</span></span>
+            <span class="evolution-type-chip type-fairy" data-type-name="Fairy"><span aria-hidden="true">✧</span><span class="type-label">Fairy</span></span>
+          </p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Wyrmlit spends its early days hiding deep within mist-shrouded forests. Highly affectionate and timid, it absorbs starlight through its translucent fairy wings to nourish its growing powers. The star-shaped lantern on its tail glows continuously in the dark, acting as a reassuring nightlight for lost wanderers while keeping hostile predators away.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Serene Grace</strong></div>
+            <div><span>ABILITY</span><strong>Levitate</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Magic Guard</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Wyrmlit base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>45</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 45">45</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 35">35</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 50">50</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 70">70</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 55">55</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 45">45</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>300</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="lumidrake" data-entry-number="001" data-types="Dragon,Fairy" data-line="wyrmlit" aria-labelledby="dex-name-lumidrake" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/lumidrake-cutout.png?v=20261107-2" alt="Lumidrake, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—001</span><span>STAGE 02 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE STARLIGHT DRAKE POKÉMON</p>
+          <h2 id="dex-name-lumidrake">Lumidrake</h2>
+          <p class="evolution-types" aria-label="Dragon and Fairy types">
+            <span class="evolution-type-chip type-dragon" data-type-name="Dragon"><span aria-hidden="true">♧</span><span class="type-label">Dragon</span></span>
+            <span class="evolution-type-chip type-fairy" data-type-name="Fairy"><span aria-hidden="true">✧</span><span class="type-label">Fairy</span></span>
+          </p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Upon evolving, Lumidrake leaves the shelter of the forest canopy to glide through high-altitude wind currents. Its body shines with a gentle radiant glow that illuminates cloudy night skies. As its dragon instinct matures, the star on its tail burns far brighter, allowing it to protect smaller Pokémon by emitting a soothing fae aura that pacifies aggressive wild beasts.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Serene Grace</strong></div>
+            <div><span>ABILITY</span><strong>Levitate</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Magic Guard</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Lumidrake base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>65</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 65">65</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 55">55</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 70">70</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 95">95</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 80">80</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 55">55</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>420</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="stellagon" data-entry-number="001" data-types="Dragon,Fairy" data-line="wyrmlit" aria-labelledby="dex-name-stellagon" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/stellagon-cutout.png?v=20261107-2" alt="Stellagon, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—001</span><span>STAGE 03 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 3 · THE CELESTIAL WYRM POKÉMON</p>
+          <h2 id="dex-name-stellagon">Stellagon</h2>
+          <p class="evolution-types" aria-label="Dragon and Fairy types">
+            <span class="evolution-type-chip type-dragon" data-type-name="Dragon"><span aria-hidden="true">♧</span><span class="type-label">Dragon</span></span>
+            <span class="evolution-type-chip type-fairy" data-type-name="Fairy"><span aria-hidden="true">✧</span><span class="type-label">Fairy</span></span>
+          </p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Stellagon rules the highest reaches of the atmosphere, taking full form as a legendary guardian of the night sky. Its deep indigo scales absorb raw starlight, which it channels into the crystalline star at the tip of its tail. It can refract this stored cosmic energy into blinding beams of pure light, while the synchronized flapping of its four wings creates acoustic shockwaves capable of shattering solid stone.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Pixilate</strong></div>
+            <div><span>ABILITY</span><strong>Levitate</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Prism Armor</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Stellagon base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>85</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 85">85</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 75">75</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 90">90</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 130">130</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 105">105</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 115">115</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>600</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="paddlet" data-entry-number="002" data-types="Water,Steel" data-line="paddlet" aria-labelledby="dex-name-paddlet" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/paddlet-front.png" alt="Paddlet, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—002</span><span>STAGE 01</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE APPRENTICE POKÉMON</p>
+          <h2 id="dex-name-paddlet">Paddlet</h2>
+          <p class="evolution-types" aria-label="Water and Steel types">
+            <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Paddlet</h3>
+          <p class="dex-entry">Born with an iron shell fused to its head, Paddlet trains along riverbanks, using its broad metal tail as a shield and paddle. Eager but clumsy, it looks up to experienced partners—and its helmet sometimes slips over its eyes.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Entry 1.</strong> It tests the strength of its metallic tail by slapping riverbed boulders thousands of times a day. If its head helmet gets dinged in battle, it wears the mark like a badge of honor.</p>
+          <p class="dex-entry"><strong>Entry 2.</strong> Despite its gentle appearance, Paddlet possesses an unyielding spirit. It naturally gathers with others of its kind to engage in organized, friendly spar matches under waterfalls.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>0.5 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>16.5 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Torrent</strong></div>
+            <div><span>ABILITY</span><strong>Shell Armor</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Defiant</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Paddlet base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>50</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button">50</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button">65</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button">60</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button">35</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button">45</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button">55</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>310</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="platasteel" data-entry-number="002" data-types="Water,Steel" data-line="paddlet" aria-labelledby="dex-name-platasteel" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/platasteel-front.png" alt="Platasteel, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—002</span><span>STAGE 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE VANGUARD POKÉMON</p>
+          <h2 id="dex-name-platasteel">Platasteel</h2>
+          <p class="evolution-types" aria-label="Water and Steel types">
+            <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Platasteel</h3>
+          <p class="dex-entry">Platasteel's dark mane, brow-guard helmet, steel vambraces, and blade-like tail reflect its disciplined nature. Stern and vigilant, it patrols riverways, protects weaker Pokémon, and refuses to tolerate an unfair fight.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Entry 1.</strong> Its tail has hardened to match the strength of forged steel. By channeling high-pressure water along the edge of its tail, it can slice cleanly through fallen trees blocking fast-flowing rivers.</p>
+          <p class="dex-entry"><strong>Entry 2.</strong> Platasteel spends long periods meditating beneath heavy waterfalls to sharpen its mental focus. It will ignore a Trainer who acts without honor or discipline.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>1.1 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>52.0 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Torrent</strong></div>
+            <div><span>ABILITY</span><strong>Battle Armor</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Defiant</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Platasteel base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>70</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button">70</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button">90</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button">80</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button">50</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button">60</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button">65</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>415</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="platyron" data-entry-number="002" data-types="Water,Steel" data-line="paddlet" aria-labelledby="dex-name-platyron" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/platyron-front.png" alt="Platyron, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—002</span><span>STAGE 03 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 3 · THE HYDROSABER POKÉMON</p>
+          <h2 id="dex-name-platyron">Platyron</h2>
+          <p class="evolution-types" aria-label="Water and Steel types">
+            <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Platyron</h3>
+          <p class="dex-entry">In its master warrior form, Platyron wears a pointed kabuto and layered iron guards. It condenses moisture into a flowing, razor-sharp water katana. A quiet, precise wanderer, it waits motionless for the perfect moment to strike.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Entry 1.</strong> By pressurizing water to extreme densities through its steel forearm guards, Platyron creates a glowing blade of compressed liquid. A single strike from its water katana can divide a surging tidal wave in two.</p>
+          <p class="dex-entry"><strong>Entry 2.</strong> It wanders solitary river systems like a master warrior. Legend speaks of Platyron drawing its liquid blade so fast that the cut is made before the sound of rushing water is even heard.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>1.8 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>115.0 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Torrent</strong></div>
+            <div><span>ABILITY</span><strong>Sharpness</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Justified</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Platyron base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>85</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button">85</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button">120</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button">100</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button">60</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button">75</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button">90</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>530</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="cloakwing" data-entry-number="003" data-types="Dark,Fighting" data-line="cloakwing" aria-labelledby="dex-name-cloakwing" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/cloakwing-front.png" alt="Cloakwing, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—003</span><span>STAGE 01 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE PROWLER POKÉMON</p>
+          <h2 id="dex-name-cloakwing">Cloakwing</h2>
+          <p class="evolution-types" aria-label="Dark and Fighting types">
+            <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+            <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+          </p>
+          <h3 class="dex-section-title">About Cloakwing</h3>
+          <p class="dex-entry">Cloakwing is a nocturnal, urban-dwelling Pokémon known for its shadowy tactics and scrappy brawling style. It crafts its own makeshift hood and cloth limb wraps using scavenged materials, securing them tightly to muffle the sound of its movement during night prowls. Despite its rogue-like appearance and mischievous tendencies, it possesses a strict sense of discipline, constantly conditioning its body against hard surfaces to prepare for its evolution.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Entry 1.</strong> It covers its face with a makeshift cloth hood to blend seamlessly into shadowed alleys and dense forest canopies. Highly mischievous yet fiercely loyal, it relies on tight limb wraps to cushion its joints when executing rapid wall-jumps and sudden strikes.</p>
+          <p class="dex-entry"><strong>Entry 2.</strong> Cloakwing trains tirelessly throughout the night, honing its brawling technique against solid rock faces. Though small in stature, its hyper-sensitive ears pick up faint vibrations from yards away, allowing it to ambush opponents before they detect its presence.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>0.6 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>11.5 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Infiltrator</strong></div>
+            <div><span>ABILITY</span><strong>Tough Claws</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Prankster</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Cloakwing base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>50</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 50">50</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 75">75</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 55">55</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 35">35</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 50">50</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 70">70</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>335</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="noctisaur" data-entry-number="003" data-types="Dark,Fighting" data-line="cloakwing" aria-labelledby="dex-name-noctisaur" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/noctisaur-front.png" alt="Noctisaur, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—003</span><span>STAGE 02 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE SHADOW BRAWLER POKÉMON</p>
+          <h2 id="dex-name-noctisaur">Noctisaur</h2>
+          <p class="evolution-types" aria-label="Dark and Fighting types">
+            <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+            <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+          </p>
+          <h3 class="dex-section-title">About Noctisaur</h3>
+          <p class="dex-entry">Noctisaur is a powerful, imposing martial artist of the dark. Upon evolution, it sheds its stealthy hood in favour of a heavy, crimson-lined mantle that acts both as armor and as a tool to throw opponents off balance during close-quarters combat. It commands respect in the wild, using its immense upper-body strength and wing-assisted mobility to protect its territory. Highly honorable, it follows a strict code of combat and will rarely attack an opponent that is unprepared or unable to fight back.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Entry 1.</strong> Having fully matured, Noctisaur replaces its early hood with a weighted cloak, using the heavy fabric to obscure its movements and disrupt enemy parries. Its dense, wrapped fists impact with enough force to shatter solid concrete in a single blow.</p>
+          <p class="dex-entry"><strong>Entry 2.</strong> Noctisaur strictly adheres to an unwritten code of combat, refusing to strike an unarmed or weakened foe. Using its broad wingspan to glide silently through the night air, it descends on targets with swift, relentless martial precision.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>1.7 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>88.0 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Infiltrator</strong></div>
+            <div><span>ABILITY</span><strong>Tough Claws</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Defiant</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Noctisaur base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>85</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 85">85</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 125">125</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 90">90</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 50">50</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 80">80</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 95">95</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>525</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="noxling" data-entry-number="004" data-types="Dark,Poison" data-line="noxling" aria-labelledby="dex-name-noxling" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/noxling-front.png" alt="Noxling, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—004</span><span>STAGE 01 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE MISCHIEF POKÉMON</p>
+          <h2 id="dex-name-noxling">Noxling</h2>
+          <p class="evolution-types" aria-label="Dark and Poison types">
+            <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+            <span class="evolution-type-chip type-poison" data-type-name="Poison"><span aria-hidden="true">☠</span><span class="type-label">Poison</span></span>
+          </p>
+          <h3 class="dex-section-title">About Noxling</h3>
+          <p class="dex-entry">A small, mischievous bat-like Pokémon that lurks in shadowy alleys and dark treetops. Highly theatrical, it loves staging minor pranks on humans and Pokémon alike, using its small stature and nimble wings to vanish before anyone catches on.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet.</strong> It glides quietly through urban streets on dark wings, secreting a mild skin irritant from the bulb on its tail. It delights in small-scale pranks, using the resulting commotion to refine its stealth and evasive tricks.</p>
+          <p class="dex-entry"><strong>Violet.</strong> Noxling views every evening as a dress rehearsal for grander chaos. It frequently taunts larger nocturnal Pokémon to practice its aerial manoeuvres, usually fleeing into the night air the moment things turn serious.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>0.4 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>4.2 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Prankster</strong></div>
+            <div><span>ABILITY</span><strong>Poison Touch</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Infiltrator</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Noxling base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>45</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 45">45</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 40">40</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 40">40</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 65">65</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 50">50</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 80">80</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>320</dd></div>
+          </dl>
+          <h3 class="dex-section-title">Stat breakdown</h3>
+          <p class="dex-entry">Fast and frail for an unevolved Pokémon, leaning heavily on its Speed and Special Attack to land quick status moves and hit-and-run attacks.</p>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="jesterror" data-entry-number="004" data-types="Dark,Poison" data-line="noxling" aria-labelledby="dex-name-jesterror" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/jesterror-front.png" alt="Jesterror, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—004</span><span>STAGE 02 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE ANARCHY POKÉMON</p>
+          <h2 id="dex-name-jesterror">Jesterror</h2>
+          <p class="evolution-types" aria-label="Dark and Poison types">
+            <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+            <span class="evolution-type-chip type-poison" data-type-name="Poison"><span aria-hidden="true">☠</span><span class="type-label">Poison</span></span>
+          </p>
+          <h3 class="dex-section-title">About Jesterror</h3>
+          <p class="dex-entry">The fully evolved form of Noxling, Jesterror is a sinister, theatrical mastermind that thrives entirely on disorder. Possessing sharp intelligence and a wicked flair for the dramatic, it treats entire cities as its personal stage, orchestrating complex schemes just to watch the chaos unfold.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet.</strong> It hurls corrosive, spiked poison-bombs attached to its tail vines to destabilise structure and order. It orchestrates elaborate, high-stakes schemes across regions for the sole purpose of baiting its hated arch-rival, Noctisaur.</p>
+          <p class="dex-entry"><strong>Violet.</strong> Its intellect matches its intense malice. Using hypnotic pulses generated by its collar and wings, it can incite wild panic in crowds. Though it plans meticulously to bring cities to their knees, Noctisaur routinely foils its grand finales—an endless humiliation that only deepens its obsession.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>1.5 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>48.5 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Prankster</strong></div>
+            <div><span>ABILITY</span><strong>Corrosion</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Levitate</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Jesterror base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>75</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 75">75</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 70">70</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 72">72</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 115">115</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 78">78</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 110">110</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>520</dd></div>
+          </dl>
+          <h3 class="dex-section-title">Stat breakdown</h3>
+          <p class="dex-entry">Built as a high-speed, special disruption sweeper. High Special Attack allows its toxic blasts to hit hard, while its top-tier Speed and Prankster ability let it set up utility hazards, taunts, or status conditions before opposing Pokémon can react.</p>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="oresaur" data-entry-number="005" data-types="Steel" data-line="oresaur" aria-labelledby="dex-name-oresaur" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/oresaur-front.png" alt="Oresaur, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—005</span><span>STAGE 01 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE IRON HIDE POKÉMON</p>
+          <h2 id="dex-name-oresaur">Oresaur</h2>
+          <p class="evolution-types" aria-label="Steel type">
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Oresaur</h3>
+          <p class="dex-entry">A small, heavily armoured reptile with stubby, underdeveloped wings. Eager to impress trainers and wild Pokémon alike, it constantly attempts feats of strength way beyond its capability, though its clumsy nature often leads to comical mishaps.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet.</strong> It loves to show off in front of others by lifting massive boulders above its head. Because its heavy steel body throws off its balance, it almost always trips over its own feet and tumbles forward.</p>
+          <p class="dex-entry"><strong>Violet.</strong> Its small wings cannot yet lift its dense body into the air. When trying to perform heroic aerial dives to show off for onlookers, it simply plummets directly into the ground, completely unfazed thanks to its steel-plated head.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>0.6 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>42.0 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Sturdy</strong></div>
+            <div><span>ABILITY</span><strong>Rock Head</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Heavy Metal</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Oresaur base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>60</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 60">60</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 75">75</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 90">90</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 35">35</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 50">50</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 40">40</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>350</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="aerosolar" data-entry-number="005" data-types="Steel,Flying" data-line="oresaur" aria-labelledby="dex-name-aerosolar" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/aerosolar-front.png" alt="Aerosolar, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—005</span><span>STAGE 02 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE SENTINEL POKÉMON</p>
+          <h2 id="dex-name-aerosolar">Aerosolar</h2>
+          <p class="evolution-types" aria-label="Steel and Flying types">
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+            <span class="evolution-type-chip type-flying" data-type-name="Flying"><span aria-hidden="true">➤</span><span class="type-label">Flying</span></span>
+          </p>
+          <h3 class="dex-section-title">About Aerosolar</h3>
+          <p class="dex-entry">Now possessing massive, fully functional crimson wings, Aerosolar acts as a self-appointed guardian of its territory. Noble and protective, it frequently forms a night-patrol duo with Noctisaur to foil Jesterror's chaotic schemes, though their contrasting personalities lead to nonstop bickering.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet.</strong> Dedicated to safeguarding weaker Pokémon, it patrols the night skies alongside Noctisaur to counter Jesterror's plots. Despite their effective teamwork, Aerosolar and Noctisaur spend roughly 90% of their patrols furiously arguing over tactics.</p>
+          <p class="dex-entry"><strong>Violet.</strong> Its steel-reinforced wings grant it incredible speed and defensive capabilities during airborne combat. While it constantly butts heads with Noctisaur over how to enforce justice, the two seamlessly sync their powers the moment Jesterror threatens the region.</p>
+          <dl class="dex-measurements">
+            <div><dt>HEIGHT</dt><dd>1.8 m</dd></div>
+            <div><dt>WEIGHT</dt><dd>185.0 kg</dd></div>
+          </dl>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Sturdy</strong></div>
+            <div><span>ABILITY</span><strong>Heavy Armor</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Justified</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Aerosolar base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>85</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 85">85</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 110">110</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 115">115</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 55">55</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 75">75</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 85">85</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>525</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="meowmet" data-entry-number="006" data-types="Fighting,Steel" data-line="sirpot" aria-labelledby="dex-name-meowmet" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/meowmet-front.png" alt="Meowmet, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—006</span><span>STAGE 01 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE METAL HELMET POKÉMON</p>
+          <h2 id="dex-name-meowmet">Meowmet</h2>
+          <p class="evolution-types" aria-label="Fighting and Steel types">
+            <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Meowmet</h3>
+          <p class="dex-entry">Meowmet is a timid feline Pokémon that originally lacked any natural defensive armor. Driven by a desire to look heroic, it found a discarded metal pot, punched eyeholes through the side, and strapped it onto its head alongside a torn red scarf. The pot gives it a massive surge of courage, allowing it to throw punches far above its weight class. However, if the pot is removed or knocked off, Meowmet immediately loses all confidence and flees from battle.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet / Red.</strong> It found a metal pot in human rubbish and poked eyeholes into it because it thought headgear made warriors look tough. Without the pot, it becomes easily frightened.</p>
+          <p class="dex-entry"><strong>Violet / Blue.</strong> The pot on its head acts as both a shield and a source of bravery. If stripped of its makeshift helmet, its confidence shatters, leaving it entirely unable to fight.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Battle Armour</strong></div>
+            <div><span>ABILITY</span><strong>Scrappy</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Defeatist</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Meowmet base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>50</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 50">50</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 65">65</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 70">70</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 35">35</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 45">45</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 55">55</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>320</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="sirpot" data-entry-number="006" data-types="Fighting,Steel" data-line="sirpot" aria-labelledby="dex-name-sirpot" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/sirpot-front.png" alt="Sirpot, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—006</span><span>STAGE 02 / 02</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE IRON MASK POKÉMON</p>
+          <h2 id="dex-name-sirpot">Sirpot</h2>
+          <p class="evolution-types" aria-label="Fighting and Steel types">
+            <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Sirpot</h3>
+          <p class="dex-entry">Upon evolution, Sirpot’s physical body grows far more muscular, and it modifies its pot into a reinforced, riveted helmet with aggressive eye slits. The pot is now fitted with a heavy metal chin strap to ensure it can never be easily removed in combat. Highly disciplined and fierce, Sirpot uses its flowing red scarf to distract opponents before landing devastating iron-fist strikes. Despite its formidable appearance, it remains deeply attached to its helmet; taking it off still causes it to instantly lose its intimidating presence.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet / Red.</strong> It customises its pot with rivets and an iron chin strap so its helmet never falls off during combat. It strikes intense poses to intimidate foes.</p>
+          <p class="dex-entry"><strong>Violet / Blue.</strong> Highly defensive of its headgear, Sirpot trains its body relentlessly. If its helmet is ever removed, its menacing aura vanishes completely, revealing a nervous exterior.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Battle Armour</strong></div>
+            <div><span>ABILITY</span><strong>Defiant</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Intimidate</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Sirpot base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>80</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 80">80</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 115">115</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 105">105</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 45">45</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 70">70</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 85">85</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>500</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="purrvolt" data-entry-number="007" data-types="Electric" data-line="purrvolt" aria-labelledby="dex-name-purrvolt" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/purrvolt-front.png?v=20261107-1" alt="Purrvolt shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—007</span><span>STAGE 01 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE PLUG TAIL POKÉMON</p>
+          <h2 id="dex-name-purrvolt">Purrvolt</h2>
+          <p class="evolution-types" aria-label="Electric type">
+            <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+          </p>
+          <h3 class="dex-section-title">About Purrvolt</h3>
+          <p class="dex-entry">Purrvolt is an energetic feline Pokémon whose bright orange fur generates static electricity as it moves. Its most distinct feature is its cord-like tail tipped with a two-prong electrical plug, which emits visible sparks when it becomes excited or plays. It frequently inserts its tail into power outlets or electrical equipment to recharge its internal reserves, occasionally causing minor household blackouts.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet / Red.</strong> Running causes its spiky orange fur to build up massive charges of static electricity. It plugs its tail into outlets to rest and recharge.</p>
+          <p class="dex-entry"><strong>Violet / Blue.</strong> When happy, sparks crackle brightly around its plug tail. It leaves small lightning-shaped scorch marks on walls where it rests.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Static</strong></div>
+            <div><span>ABILITY</span><strong>Volt Absorb</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Transistor</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Purrvolt base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>45</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 45">45</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 40">40</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 40">40</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 65">65</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 50">50</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 70">70</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>310</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="purrserg" data-entry-number="007" data-types="Electric" data-line="purrvolt" aria-labelledby="dex-name-purrserg" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/purrserg-front.png?v=20261107-1" alt="Purrserg shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—007</span><span>STAGE 02 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE GROUNDING CABLE POKÉMON</p>
+          <h2 id="dex-name-purrserg">Purrserg</h2>
+          <p class="evolution-types" aria-label="Electric type">
+            <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+          </p>
+          <h3 class="dex-section-title">About Purrserg</h3>
+          <p class="dex-entry">Upon evolving, Purrserg drops to a sleek quadrupedal stance built for high-speed sprinting. Its static fur matures into distinct lightning-bolt striping down its back and legs, while its paws sprout glowing electrical claws. Its plug tail has upgraded into a heavy-duty three-prong grounded connector. The sturdy third prong helps release excess charge and prevent overheating, while Purrserg channels powerful electrical shocks through its body and claws.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet / Red.</strong> Its tail plug has developed a third grounding prong that safely releases excess voltage. The charge it vents makes nearby objects crackle with static.</p>
+          <p class="dex-entry"><strong>Violet / Blue.</strong> Sleek and agile, it sprints at extreme speeds to build up internal power. Its glowing claws deliver precise jolts when it pounces on prey.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Static</strong></div>
+            <div><span>ABILITY</span><strong>Motor Drive</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Surge Surfer</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Purrserg base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>70</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 70">70</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 65">65</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 70">70</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 115">115</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 75">75</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 105">105</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>500</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="roarserg" data-entry-number="007" data-types="Electric" data-line="purrvolt" aria-labelledby="dex-name-roarserg" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/roarserg-front.png?v=20261107-1" alt="Roarserg shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—007</span><span>STAGE 03 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 3 · THE POWER GRID POKÉMON</p>
+          <h2 id="dex-name-roarserg">Roarserg</h2>
+          <p class="evolution-types" aria-label="Electric type">
+            <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+          </p>
+          <h3 class="dex-section-title">About Roarserg</h3>
+          <p class="dex-entry">Roarserg is the majestic final stage of the line, boasting a thick, cream-colored mane that hums with high-voltage energy. Its tail plug features an industrial-grade three-prong grounded connector capable of conducting power plant-level current. When Roarserg lets out an apex roar, electricity surges through its mane and is released through its tail and claws in seismic, lightning-charged shockwaves. Prideful and protective of its territory, it can act as a natural generator to power an entire small town in emergencies.</p>
+          <h3 class="dex-section-title">Pokédex entries</h3>
+          <p class="dex-entry"><strong>Scarlet / Red.</strong> Its roar sends powerful electrical pulses through its thick mane. The three-pronged plug in its tail lets it safely discharge excess energy in a brilliant burst.</p>
+          <p class="dex-entry"><strong>Violet / Blue.</strong> Revered as a guardian of power grids, it stores enough electricity within its body to keep an entire city powered during a blackout.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Motor Drive</strong></div>
+            <div><span>ABILITY</span><strong>Electrosynthesis</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Galvanize</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Roarserg base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>85</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 85">85</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 75">75</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 80">80</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 125">125</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 80">80</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 90">90</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>535</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="springlet" data-entry-number="008" data-types="Water" data-line="springlet" aria-labelledby="dex-name-springlet" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/springlet-front.png" alt="Springlet, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—008</span><span>STAGE 01 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE PRONK CALF POKÉMON</p>
+          <h2 id="dex-name-springlet">Springlet</h2>
+          <p class="evolution-types" aria-label="Water type">
+            <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+          </p>
+          <h3 class="dex-section-title">About Springlet</h3>
+          <p class="dex-entry">Springlet live in tight-knit herds on open grasslands bordering riverbeds. Spirited and constantly restless, young Springlet turn every daily activity into a playful brawl, gleefully leaping over one another to show off their springy legs and high-energy bounds.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Bursting with restless energy, Springlet playfully headbutts anything that moves to test its fledgling horns. When startled, it fires a jet of water from its tail to vault high into the air, gracefully dodging predators before kicking off their backs to make an escape.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Torrent</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Reckless</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Springlet base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>55</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 55">55</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 65">65</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 50">50</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 45">45</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 50">50</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 65">65</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>330</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="bokhlete" data-entry-number="008" data-types="Water,Fighting" data-line="springlet" aria-labelledby="dex-name-bokhlete" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/bokhlete-front.png" alt="Bokhlete, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—008</span><span>STAGE 02 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE CLASHING POKÉMON</p>
+          <h2 id="dex-name-bokhlete">Bokhlete</h2>
+          <p class="evolution-types" aria-label="Water and Fighting types">
+            <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+            <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+          </p>
+          <h3 class="dex-section-title">About Bokhlete</h3>
+          <p class="dex-entry">Standing on two legs, Bokhlete is fiercely competitive and refuses to back down from any physical dispute. When two rivals cross paths, they lock horns and drive their shoulders into each other in grueling endurance clashes that last for exactly eighty minutes, parting as mutual equals the moment time is up.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Proud and hot-blooded, Bokhlete challenges both packmates and larger Pokémon to tests of raw pushing power. It sprays pressurized jets of water from the vents on its hind legs to launch bone-jarring tackles, refusing to yield ground until its opponent is completely winded.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Torrent</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Reckless</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Bokhlete base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>75</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 75">75</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 85">85</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 75">75</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 60">60</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 65">65</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 60">60</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>420</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="bokcrush" data-entry-number="008" data-types="Water,Fighting" data-line="springlet" aria-labelledby="dex-name-bokcrush" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/bokcrush-front.png" alt="Bokcrush, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—008</span><span>STAGE 03 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 3 · THE TITAN HORN POKÉMON</p>
+          <h2 id="dex-name-bokcrush">Bokcrush</h2>
+          <p class="evolution-types" aria-label="Water and Fighting types">
+            <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+            <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+          </p>
+          <h3 class="dex-section-title">About Bokcrush</h3>
+          <p class="dex-entry">Bokcrush serves as the stoic guardian of the entire herd. Quietly confident and immovable, it rarely starts fights, but when provoked or protecting its territory, it unleashes terrifying brute force, anchoring itself with water torrents before delivering devastating shoulder crushes.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Known for its unyielding stamina, Bokcrush can battle at maximum intensity for eighty straight minutes without its breathing hitching once. It channels powerful water currents through its back and tail to anchor its footing, shrugging off incoming blows before plowing clean through foes with a single punishing tackle.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Torrent</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Solid Rock</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Bokcrush base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>100</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 100">100</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 125">125</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 105">105</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 65">65</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 75">75</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 60">60</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>530</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="cubolt" data-entry-number="009" data-types="Fire,Electric" data-line="cubolt" aria-labelledby="dex-name-cubolt" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/cubolt-front.png" alt="Cubolt, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—009</span><span>STAGE 01 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE SPARK CUB POKÉMON</p>
+          <h2 id="dex-name-cubolt">Cubolt</h2>
+          <p class="evolution-types" aria-label="Fire and Electric types">
+            <span class="evolution-type-chip type-fire" data-type-name="Fire"><span aria-hidden="true">✦</span><span class="type-label">Fire</span></span>
+            <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+          </p>
+          <h3 class="dex-section-title">About Cubolt</h3>
+          <p class="dex-entry">Cubolt inhabit dry savanna scrublands, roaming in playful prides. Naturally curious and energetic, they carve spherical lumps of hardened volcanic rock and spend hours batting them across the terrain, generating static friction that charges both their paws and their rocky toy.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Cubolt sharpens its claws by dribbling a volcanic stone across savanna turf. As its fur builds up static charge, the friction superheats the rock until it glows bright red, which Cubolt bats into brush to flush out prey.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Blaze</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Motor Drive</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Cubolt base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>50</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 50">50</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 68">68</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 45">45</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 60">60</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 45">45</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 62">62</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>330</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="striklaw" data-entry-number="009" data-types="Fire,Electric" data-line="cubolt" aria-labelledby="dex-name-striklaw" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/striklaw-front.png" alt="Striklaw, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—009</span><span>STAGE 02 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE FLARE MANE POKÉMON</p>
+          <h2 id="dex-name-striklaw">Striklaw</h2>
+          <p class="evolution-types" aria-label="Fire and Electric types">
+            <span class="evolution-type-chip type-fire" data-type-name="Fire"><span aria-hidden="true">✦</span><span class="type-label">Fire</span></span>
+            <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+          </p>
+          <h3 class="dex-section-title">About Striklaw</h3>
+          <p class="dex-entry">Now growing a flowing, swept-back fiery mane, Striklaw displays incredible footwork and nimbleness. Its leg fur develops dark, insulated bands that prevent self-shocking as it channels raw electrical current into its magma stone to keep it perpetually molten.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Striklaw never lets its favorite magma stone rest, continuously weaving and controlling it with lightning-fast paw strikes. When cornered, it ignites its mane into blazing sparks and blasts the charged stone forward like a comet to stun rivals.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Blaze</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Motor Drive</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Striklaw base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>65</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 65">65</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 88">88</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 60">60</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 80">80</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 60">60</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 67">67</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>420</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="volterion" data-entry-number="009" data-types="Fire,Electric" data-line="cubolt" aria-labelledby="dex-name-volterion" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/volterion-front.png" alt="Volterion, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—009</span><span>STAGE 03 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 3 · THE HIGH VOLTAGE POKÉMON</p>
+          <h2 id="dex-name-volterion">Volterion</h2>
+          <p class="evolution-types" aria-label="Fire and Electric types">
+            <span class="evolution-type-chip type-fire" data-type-name="Fire"><span aria-hidden="true">✦</span><span class="type-label">Fire</span></span>
+            <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+          </p>
+          <h3 class="dex-section-title">About Volterion</h3>
+          <p class="dex-entry">Standing tall on powerful hind legs, Volterion commands the pride with thunderous authority. Its radiant, flame-formed mane crackles with thousands of volts, and the scorched rock beneath its paw has transformed into an unstable plasma orb held together purely by its electromagnetic grip.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Volterion compresses pure solar heat and lightning into a dense plasma sphere held beneath its foot. Its thunderous, horn-like roar echoes across the veld for miles, signaling an impending burst of explosive kicks that send electrified fireballs ripping across the plains.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Blaze</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Ball Fetch / Galvanize</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Volterion base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>80</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 80">80</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 115">115</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 75">75</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 110">110</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 70">70</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 80">80</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>530</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="protebud" data-entry-number="010" data-types="Grass" data-line="protebud" aria-labelledby="dex-name-protebud" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/protebud-front.png" alt="Protebud, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—010</span><span>STAGE 01 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 1 · THE CLOSED BLOOM POKÉMON</p>
+          <h2 id="dex-name-protebud">Protebud</h2>
+          <p class="evolution-types" aria-label="Grass type">
+            <span class="evolution-type-chip type-grass" data-type-name="Grass"><span aria-hidden="true">❖</span><span class="type-label">Grass</span></span>
+          </p>
+          <h3 class="dex-section-title">About Protebud</h3>
+          <p class="dex-entry">Protebud dwells quietly in mountain fynbos and high scrublands. Encased in a tightly closed protea bract with thick foliage swaddling its core, it is naturally shy and cautious. A dense sliver of petrified ironwood slowly forms along its spine, which it rubs against rocky outcrops to test its hardening grain.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">When predators approach, Protebud burrows into dry shrubs and pulls its tough flower bracts over its face. The dense wooden ridge growing from its back is already hard enough to deflect sharp pecks and clacking mandibles without leaving a scratch.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Overgrow</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Sturdy</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Protebud base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>60</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 60">60</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 62">62</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 70">70</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 40">40</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 53">53</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 45">45</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>330</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="stembark" data-entry-number="010" data-types="Grass,Steel" data-line="protebud" aria-labelledby="dex-name-stembark" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/stembark-front.png" alt="Stembark, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—010</span><span>STAGE 02 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 2 · THE WILLOW-ARM POKÉMON</p>
+          <h2 id="dex-name-stembark">Stembark</h2>
+          <p class="evolution-types" aria-label="Grass and Steel types">
+            <span class="evolution-type-chip type-grass" data-type-name="Grass"><span aria-hidden="true">❖</span><span class="type-label">Grass</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Stembark</h3>
+          <p class="dex-entry">Its protea crown begins to peel open as silver shin-guards made of biological metal fuse over its lower legs. Stembark spends hours practicing its stances on uneven slopes, using the seasoned flat slab of ironwood protruding from its fleece to parry falling stones with crisp, clockwork timing.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Stembark perches on boulders to intercept falling rubble, batting away loose stones with the flat, steel-hard plank embedded on its back. The metallic greaves covering its shins allow it to hold its ground even when hit head-on by rushing foes.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Overgrow</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Sturdy</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Stembark base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>75</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 75">75</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 82">82</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 95">95</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 50">50</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 68">68</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 50">50</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>420</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dex-profile" data-stage="protecrick" data-entry-number="010" data-types="Grass,Steel" data-line="protebud" aria-labelledby="dex-name-protecrick" hidden>
+        <figure class="dex-art-frame">
+          <img class="dex-art dex-art-cutout" src="assets/protecrick-front.png" alt="Protecrick, shown from the front">
+          <figcaption class="dex-art-caption"><span>GM—010</span><span>STAGE 03 / 03</span></figcaption>
+        </figure>
+        <div class="dex-copy">
+          <p class="evolution-stage">STAGE 3 · THE WICKET GUARD POKÉMON</p>
+          <h2 id="dex-name-protecrick">Protecrick</h2>
+          <p class="evolution-types" aria-label="Grass and Steel types">
+            <span class="evolution-type-chip type-grass" data-type-name="Grass"><span aria-hidden="true">❖</span><span class="type-label">Grass</span></span>
+            <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+          </p>
+          <h3 class="dex-section-title">About Protecrick</h3>
+          <p class="dex-entry">Reaching its fully bloomed, majestic form, Protecrick stands as a stoic woodland sentry. Its royal protea mane blooms open, fringed by thick white down and plated armor across its forearms and shins. It wields a massive, naturally grown ironwood paddle that has absorbed metallic minerals from the soil, swatting away high-velocity projectiles with unbelievable reflex and discipline.</p>
+          <h3 class="dex-section-title">Pokédex entry</h3>
+          <p class="dex-entry">Patient and unshakable, Protecrick can stand completely motionless for days while tracking the subtle flight path of incoming threats. With a single fluid, explosive swing of its ironwood paddle, it can deflect boulder-sized projectiles straight back at the attacker with pinpoint accuracy.</p>
+          <div class="dex-abilities">
+            <div><span>ABILITY</span><strong>Overgrow</strong></div>
+            <div><span>HIDDEN ABILITY</span><strong>Technician / Dauntless Shield</strong></div>
+          </div>
+          <div class="stat-chart-panel dex-stat-panel">
+            <div class="stat-chart-heading"><strong>BASE STATS</strong><span>OUT OF 150</span></div>
+            <svg class="stat-radar" viewBox="0 0 260 240" role="img" aria-label="Protecrick base stats radar chart. Focus or hover over a stat value to highlight it."></svg>
+            <p class="stat-readout" aria-live="polite"><strong>HP</strong><span>90</span></p>
+          </div>
+          <dl class="stat-list">
+            <div><dt>HP</dt><dd><button class="stat-select" type="button" aria-label="HP: 90">90</button></dd></div>
+            <div><dt>Attack</dt><dd><button class="stat-select" type="button" aria-label="Attack: 110">110</button></dd></div>
+            <div><dt>Defense</dt><dd><button class="stat-select" type="button" aria-label="Defense: 120">120</button></dd></div>
+            <div><dt>Sp. Atk</dt><dd><button class="stat-select" type="button" aria-label="Special Attack: 60">60</button></dd></div>
+            <div><dt>Sp. Def</dt><dd><button class="stat-select" type="button" aria-label="Special Defense: 95">95</button></dd></div>
+            <div><dt>Speed</dt><dd><button class="stat-select" type="button" aria-label="Speed: 55">55</button></dd></div>
+            <div class="stat-total"><dt>Total</dt><dd>530</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <nav class="evolution-timeline" data-evolution-line="wyrmlit" aria-label="Wyrmlit evolution stages">
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GROW INTO THE NIGHT</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=wyrmlit" data-stage-link="wyrmlit" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Wyrmlit</span><span class="timeline-type" data-type-names="Dragon,Fairy">DRAGON · FAIRY</span></a></li>
+          <li><a href="gmon-detail.html?stage=lumidrake" data-stage-link="lumidrake" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Lumidrake</span><span class="timeline-type" data-type-names="Dragon,Fairy">DRAGON · FAIRY</span></a></li>
+          <li><a href="gmon-detail.html?stage=stellagon" data-stage-link="stellagon" data-page-transition><span class="timeline-index">03</span><span class="timeline-name">Stellagon</span><span class="timeline-type" data-type-names="Dragon,Fairy">DRAGON · FAIRY</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="paddlet" aria-label="Paddlet evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE APPRENTICE'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=paddlet" data-stage-link="paddlet" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Paddlet</span><span class="timeline-type" data-type-names="Water,Steel">WATER · STEEL</span></a></li>
+          <li><a href="gmon-detail.html?stage=platasteel" data-stage-link="platasteel" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Platasteel</span><span class="timeline-type" data-type-names="Water,Steel">WATER · STEEL</span></a></li>
+          <li><a href="gmon-detail.html?stage=platyron" data-stage-link="platyron" data-page-transition><span class="timeline-index">03</span><span class="timeline-name">Platyron</span><span class="timeline-type" data-type-names="Water,Steel">WATER · STEEL</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="cloakwing" aria-label="Cloakwing evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE NIGHT PROWLER'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=cloakwing" data-stage-link="cloakwing" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Cloakwing</span><span class="timeline-type" data-type-names="Dark,Fighting">DARK · FIGHTING</span></a></li>
+          <li><a href="gmon-detail.html?stage=noctisaur" data-stage-link="noctisaur" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Noctisaur</span><span class="timeline-type" data-type-names="Dark,Fighting">DARK · FIGHTING</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="noxling" aria-label="Noxling evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE MISCHIEF-MAKER'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=noxling" data-stage-link="noxling" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Noxling</span><span class="timeline-type" data-type-names="Dark,Poison">DARK · POISON</span></a></li>
+          <li><a href="gmon-detail.html?stage=jesterror" data-stage-link="jesterror" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Jesterror</span><span class="timeline-type" data-type-names="Dark,Poison">DARK · POISON</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="oresaur" aria-label="Oresaur evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE IRON HIDE'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=oresaur" data-stage-link="oresaur" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Oresaur</span><span class="timeline-type" data-type-names="Steel">STEEL</span></a></li>
+          <li><a href="gmon-detail.html?stage=aerosolar" data-stage-link="aerosolar" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Aerosolar</span><span class="timeline-type" data-type-names="Steel,Flying">STEEL · FLYING</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="sirpot" aria-label="Meowmet evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE MAKESHIFT HERO'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=meowmet" data-stage-link="meowmet" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Meowmet</span><span class="timeline-type" data-type-names="Fighting,Steel">FIGHTING · STEEL</span></a></li>
+          <li><a href="gmon-detail.html?stage=sirpot" data-stage-link="sirpot" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Sirpot</span><span class="timeline-type" data-type-names="Fighting,Steel">FIGHTING · STEEL</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="purrvolt" aria-label="Purrvolt evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE CHARGED CAT'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=purrvolt" data-stage-link="purrvolt" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Purrvolt</span><span class="timeline-type" data-type-names="Electric">ELECTRIC</span></a></li>
+          <li><a href="gmon-detail.html?stage=purrserg" data-stage-link="purrserg" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Purrserg</span><span class="timeline-type" data-type-names="Electric">ELECTRIC</span></a></li>
+          <li><a href="gmon-detail.html?stage=roarserg" data-stage-link="roarserg" data-page-transition><span class="timeline-index">03</span><span class="timeline-name">Roarserg</span><span class="timeline-type" data-type-names="Electric">ELECTRIC</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="springlet" aria-label="Springlet evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE PRONK CALF'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=springlet" data-stage-link="springlet" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Springlet</span><span class="timeline-type" data-type-names="Water">WATER</span></a></li>
+          <li><a href="gmon-detail.html?stage=bokhlete" data-stage-link="bokhlete" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Bokhlete</span><span class="timeline-type" data-type-names="Water,Fighting">WATER · FIGHTING</span></a></li>
+          <li><a href="gmon-detail.html?stage=bokcrush" data-stage-link="bokcrush" data-page-transition><span class="timeline-index">03</span><span class="timeline-name">Bokcrush</span><span class="timeline-type" data-type-names="Water,Fighting">WATER · FIGHTING</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="cubolt" aria-label="Cubolt evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE SPARK CUB'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=cubolt" data-stage-link="cubolt" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Cubolt</span><span class="timeline-type" data-type-names="Fire,Electric">FIRE · ELECTRIC</span></a></li>
+          <li><a href="gmon-detail.html?stage=striklaw" data-stage-link="striklaw" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Striklaw</span><span class="timeline-type" data-type-names="Fire,Electric">FIRE · ELECTRIC</span></a></li>
+          <li><a href="gmon-detail.html?stage=volterion" data-stage-link="volterion" data-page-transition><span class="timeline-index">03</span><span class="timeline-name">Volterion</span><span class="timeline-type" data-type-names="Fire,Electric">FIRE · ELECTRIC</span></a></li>
+        </ol>
+      </nav>
+
+      <nav class="evolution-timeline" data-evolution-line="protebud" aria-label="Protebud evolution stages" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">THE CLOSED BLOOM'S JOURNEY</p><h2>Evolution line</h2></div>
+          <span class="library-hint">SELECT A STAGE</span>
+        </div>
+        <ol>
+          <li><a href="gmon-detail.html?stage=protebud" data-stage-link="protebud" data-page-transition><span class="timeline-index">01</span><span class="timeline-name">Protebud</span><span class="timeline-type" data-type-names="Grass">GRASS</span></a></li>
+          <li><a href="gmon-detail.html?stage=stembark" data-stage-link="stembark" data-page-transition><span class="timeline-index">02</span><span class="timeline-name">Stembark</span><span class="timeline-type" data-type-names="Grass,Steel">GRASS · STEEL</span></a></li>
+          <li><a href="gmon-detail.html?stage=protecrick" data-stage-link="protecrick" data-page-transition><span class="timeline-index">03</span><span class="timeline-name">Protecrick</span><span class="timeline-type" data-type-names="Grass,Steel">GRASS · STEEL</span></a></li>
+        </ol>
+      </nav>
+
+      <section class="dex-artwork" data-stage-artwork="wyrmlit" aria-labelledby="wyrmlit-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—001 · STAGE 01</p><h2 id="wyrmlit-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/wyrmlit-front-back.png?v=20261107-2" alt="Wyrmlit shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="lumidrake" aria-labelledby="lumidrake-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—001 · STAGE 02</p><h2 id="lumidrake-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/lumidrake-front-back.png?v=20261107-2" alt="Lumidrake shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="stellagon" aria-labelledby="stellagon-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—001 · STAGE 03</p><h2 id="stellagon-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/stellagon-front-back.png?v=20261107-2" alt="Stellagon shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="paddlet" aria-labelledby="paddlet-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—002 · STAGE 01</p><h2 id="paddlet-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/paddlet-front-back.jpg" alt="Paddlet shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="platasteel" aria-labelledby="platasteel-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—002 · STAGE 02</p><h2 id="platasteel-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/platasteel-front-back.jpg" alt="Platasteel shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="platyron" aria-labelledby="platyron-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—002 · STAGE 03</p><h2 id="platyron-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/platyron-front-back.jpg" alt="Platyron shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="cloakwing" aria-labelledby="cloakwing-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—003 · STAGE 01</p><h2 id="cloakwing-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/cloakwing-front-back.png" alt="Cloakwing shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="noctisaur" aria-labelledby="noctisaur-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—003 · STAGE 02</p><h2 id="noctisaur-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/noctisaur-front-back.png" alt="Noctisaur shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="noxling" aria-labelledby="noxling-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—004 · STAGE 01</p><h2 id="noxling-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/noxling-front-back.png" alt="Noxling shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="jesterror" aria-labelledby="jesterror-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—004 · STAGE 02</p><h2 id="jesterror-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/jesterror-front-back.png" alt="Jesterror shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="oresaur" aria-labelledby="oresaur-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—005 · STAGE 01</p><h2 id="oresaur-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/oresaur-front-back.png" alt="Oresaur shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="aerosolar" aria-labelledby="aerosolar-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—005 · STAGE 02</p><h2 id="aerosolar-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/aerosolar-front-back.png" alt="Aerosolar shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="meowmet" aria-labelledby="meowmet-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—006 · STAGE 01</p><h2 id="meowmet-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure dex-artwork-views">
+          <div class="dex-artwork-view">
+            <img src="assets/meowmet-front.png" alt="Meowmet shown from the front">
+            <span>FRONT VIEW</span>
+          </div>
+          <div class="dex-artwork-view">
+            <img src="assets/meowmet-back.png" alt="Meowmet shown from the back">
+            <span>BACK VIEW</span>
+          </div>
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="sirpot" aria-labelledby="sirpot-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—006 · STAGE 02</p><h2 id="sirpot-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure dex-artwork-views">
+          <div class="dex-artwork-view">
+            <img src="assets/sirpot-front.png" alt="Sirpot shown from the front">
+            <span>FRONT VIEW</span>
+          </div>
+          <div class="dex-artwork-view">
+            <img src="assets/sirpot-back.png" alt="Sirpot shown from the back">
+            <span>BACK VIEW</span>
+          </div>
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="purrvolt" aria-labelledby="purrvolt-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—007 · STAGE 01</p><h2 id="purrvolt-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/purrvolt-front-back.png?v=20261107-1" alt="Purrvolt shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="purrserg" aria-labelledby="purrserg-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—007 · STAGE 02</p><h2 id="purrserg-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/purrserg-stage2-front-back.png?v=20261107-1" alt="Purrserg shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="roarserg" aria-labelledby="roarserg-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—007 · STAGE 03</p><h2 id="roarserg-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/roarserg-front-back.png?v=20261107-1" alt="Roarserg shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="springlet" aria-labelledby="springlet-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—008 · STAGE 01</p><h2 id="springlet-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/springlet-front-back.png" alt="Springlet shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="bokhlete" aria-labelledby="bokhlete-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—008 · STAGE 02</p><h2 id="bokhlete-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/bokhlete-front-back.png" alt="Bokhlete shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="bokcrush" aria-labelledby="bokcrush-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—008 · STAGE 03</p><h2 id="bokcrush-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/bokcrush-front-back.png" alt="Bokcrush shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="cubolt" aria-labelledby="cubolt-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—009 · STAGE 01</p><h2 id="cubolt-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/cubolt-front-back.png" alt="Cubolt shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="striklaw" aria-labelledby="striklaw-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—009 · STAGE 02</p><h2 id="striklaw-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/striklaw-front-back.png" alt="Striklaw shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="volterion" aria-labelledby="volterion-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—009 · STAGE 03</p><h2 id="volterion-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/volterion-front-back.png" alt="Volterion shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="protebud" aria-labelledby="protebud-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—010 · STAGE 01</p><h2 id="protebud-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/protebud-front-back.png" alt="Protebud shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="stembark" aria-labelledby="stembark-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—010 · STAGE 02</p><h2 id="stembark-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/stembark-front-back.png" alt="Stembark shown from the front and back">
+        </figure>
+      </section>
+      <section class="dex-artwork" data-stage-artwork="protecrick" aria-labelledby="protecrick-artwork-title" hidden>
+        <div class="timeline-heading">
+          <div><p class="tool-kicker">GM—010 · STAGE 03</p><h2 id="protecrick-artwork-title">Additional artwork</h2></div>
+          <span class="library-hint">FRONT &amp; BACK VIEW</span>
+        </div>
+        <figure class="dex-artwork-figure">
+          <img src="assets/protecrick-front-back.png" alt="Protecrick shown from the front and back">
+        </figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>GM<span class="wordmark-accent">ON</span> ELEMENTAL ARCHIVE</span>
+      <a href="gmon.html#first-gmon" data-archive-link>BACK TO THE ARCHIVE <span aria-hidden="true">↗</span></a>
+    </footer>
+  </div>
+</body>
+</html>

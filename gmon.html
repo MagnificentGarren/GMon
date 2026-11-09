@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Browse the GMon archive, search by type, and follow each evolution line.">
+  <title>GMon Archive — GMon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261107-14">
+  <script src="app.js" defer></script>
+  <script src="gmon-types.js" defer></script>
+  <script src="gmon.js" defer></script>
+</head>
+<body class="gmon-page">
+  <div class="gmon-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="GMon home">
+        <span class="wordmark-icon" aria-hidden="true">G</span>
+        <span>GM<span class="wordmark-accent">ON</span></span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="site-nav-link" href="index.html" data-page-transition>Home</a>
+          <a class="site-nav-link is-current" href="gmon.html" aria-current="page" data-page-transition>GMon Archive</a>
+          <a class="site-nav-link" href="chart.html" data-page-transition>Type Matchups</a>
+        </nav>
+        <a class="home-return" href="index.html" data-page-transition><span aria-hidden="true">←</span> Back to Home</a>
+        <div class="theme-switcher" role="group" aria-label="Choose a color theme">
+          <button class="theme-button is-active" type="button" data-theme-choice="light" aria-label="Light theme" aria-pressed="true"><span class="theme-dot theme-dot-light"></span></button>
+          <button class="theme-button" type="button" data-theme-choice="dark" aria-label="Dark theme" aria-pressed="false"><span class="theme-dot theme-dot-dark"></span></button>
+          <button class="theme-button" type="button" data-theme-choice="alternate" aria-label="Alternate theme" aria-pressed="false"><span class="theme-dot theme-dot-alternate"></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="gmon-intro gmon-welcome" aria-labelledby="gmon-title">
+        <div class="archive-welcome-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> YOUR NEXT ADVENTURE STARTS HERE</p>
+          <h1 id="gmon-title">Welcome to the <span>GMon Archive.</span></h1>
+          <p class="gmon-subtitle">Meet the creatures, discover their types, and follow every evolution.</p>
+          <span class="archive-count">          <strong id="gmon-entry-count">26</strong><span>GMON<br>ENTRIES</span></span>
+        </div>
+        <figure class="archive-hero-art">
+          <img src="assets/paddlet-front.png" alt="Paddlet, the first-stage Water and Steel GMon">
+        </figure>
+      </section>
+
+      <section class="archive-tools" aria-label="Search and filter the GMon archive">
+        <div class="archive-filter-bar">
+          <div class="archive-filter-intro">
+            <p class="tool-kicker">FIND A GMON</p>
+            <p>Search by name or filter the archive by type.</p>
+          </div>
+          <div class="archive-browser-controls" role="search" aria-label="Filter GMon archive">
+            <label class="sr-only" for="gmon-search">Search GMon by name</label>
+            <input class="archive-search" id="gmon-search" type="search" placeholder="Search GMon by name">
+            <div class="type-filter">
+              <button class="filter-toggle" id="type-filter-toggle" type="button" aria-expanded="false" aria-controls="type-filter-popover">
+                Filter by type <span class="filter-selected-count" id="filter-selected-count"></span><span class="filter-chevron" aria-hidden="true">⌄</span>
+              </button>
+              <div class="type-filter-popover" id="type-filter-popover" hidden>
+                <p class="tool-kicker" id="type-filter-title">CHOOSE TYPES</p>
+                <div class="type-filter-options" id="type-filter-options" role="group" aria-labelledby="type-filter-title"></div>
+                <button class="filter-clear" id="clear-type-filters" type="button">Clear all filters</button>
+              </div>
+            </div>
+            <span class="archive-result-count" id="gmon-result-count" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </section>
+
+      <details class="type-stats" open>
+        <summary>Available GMon by type</summary>
+        <p class="type-stats-description">Counts include every GMon entry in the archive.</p>
+        <div class="type-stats-grid" id="type-stats-grid"></div>
+      </details>
+
+      <p class="archive-empty" id="archive-empty" hidden>No GMon match those filters. Try another name or type.</p>
+
+      <section class="first-gmon" id="first-gmon" aria-labelledby="first-gmon-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 001</p>
+            <h2 id="first-gmon-title">The Wyrmlit evolution line</h2>
+          </div>
+          <span class="library-hint">A THREE-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=wyrmlit" aria-labelledby="archive-wyrmlit" data-types="Dragon,Fairy" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/wyrmlit-front.png?v=20261107-2" alt="Wyrmlit, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE WISH TAIL POKÉMON</p>
+              <h3 id="archive-wyrmlit">Wyrmlit</h3>
+              <p class="evolution-types" aria-label="Dragon and Fairy types">
+                <span class="evolution-type-chip type-dragon" data-type-name="Dragon"><span aria-hidden="true">♧</span><span class="type-label">Dragon</span></span>
+                <span class="evolution-type-chip type-fairy" data-type-name="Fairy"><span aria-hidden="true">✧</span><span class="type-label">Fairy</span></span>
+              </p>
+              <p class="evolution-teaser">A shy forest-dweller whose starlit tail guides travelers through the night.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+
+          <a class="evolution-card" href="gmon-detail.html?stage=lumidrake" aria-labelledby="archive-lumidrake" data-types="Dragon,Fairy" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/lumidrake-cutout.png?v=20261107-2" alt="Lumidrake, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE STARLIGHT DRAKE POKÉMON</p>
+              <h3 id="archive-lumidrake">Lumidrake</h3>
+              <p class="evolution-types" aria-label="Dragon and Fairy types">
+                <span class="evolution-type-chip type-dragon" data-type-name="Dragon"><span aria-hidden="true">♧</span><span class="type-label">Dragon</span></span>
+                <span class="evolution-type-chip type-fairy" data-type-name="Fairy"><span aria-hidden="true">✧</span><span class="type-label">Fairy</span></span>
+              </p>
+              <p class="evolution-teaser">A radiant drake that rides high winds and calms wild beasts with its fae aura.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+
+          <a class="evolution-card" href="gmon-detail.html?stage=stellagon" aria-labelledby="archive-stellagon" data-types="Dragon,Fairy" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/stellagon-cutout.png?v=20261107-2" alt="Stellagon, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 3 · THE CELESTIAL WYRM POKÉMON</p>
+              <h3 id="archive-stellagon">Stellagon</h3>
+              <p class="evolution-types" aria-label="Dragon and Fairy types">
+                <span class="evolution-type-chip type-dragon" data-type-name="Dragon"><span aria-hidden="true">♧</span><span class="type-label">Dragon</span></span>
+                <span class="evolution-type-chip type-fairy" data-type-name="Fairy"><span aria-hidden="true">✧</span><span class="type-label">Fairy</span></span>
+              </p>
+              <p class="evolution-teaser">A celestial guardian that channels starlight into blinding beams and sonic force.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="paddlet-line" aria-labelledby="paddlet-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 002</p>
+            <h2 id="paddlet-line-title">The Paddlet evolution line</h2>
+          </div>
+          <span class="library-hint">A THREE-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=paddlet" aria-labelledby="archive-paddlet" data-types="Water,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/paddlet-front.png" alt="Paddlet, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE APPRENTICE POKÉMON</p>
+              <h3 id="archive-paddlet">Paddlet</h3>
+              <p class="evolution-types" aria-label="Water and Steel types">
+                <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">It tests its metal tail on river stones, wearing every battle mark with pride.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=platasteel" aria-labelledby="archive-platasteel" data-types="Water,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/platasteel-front.png" alt="Platasteel, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE VANGUARD POKÉMON</p>
+              <h3 id="archive-platasteel">Platasteel</h3>
+              <p class="evolution-types" aria-label="Water and Steel types">
+                <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">It channels water along its steel tail to clear riverways and protect the vulnerable.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=platyron" aria-labelledby="archive-platyron" data-types="Water,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/platyron-front.png" alt="Platyron, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 3 · THE HYDROSABER POKÉMON</p>
+              <h3 id="archive-platyron">Platyron</h3>
+              <p class="evolution-types" aria-label="Water and Steel types">
+                <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">A stoic master warrior that forges razor-sharp water blades from the air.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="cloakwing-line" aria-labelledby="cloakwing-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 003</p>
+            <h2 id="cloakwing-line-title">The Cloakwing evolution line</h2>
+          </div>
+          <span class="library-hint">A TWO-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=cloakwing" aria-labelledby="archive-cloakwing" data-types="Dark,Fighting" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/cloakwing-front.png" alt="Cloakwing, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE PROWLER POKÉMON</p>
+              <h3 id="archive-cloakwing">Cloakwing</h3>
+              <p class="evolution-types" aria-label="Dark and Fighting types">
+                <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+                <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+              </p>
+              <p class="evolution-teaser">A hooded night prowler that trains its brawling technique against solid rock faces.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=noctisaur" aria-labelledby="archive-noctisaur" data-types="Dark,Fighting" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/noctisaur-front.png" alt="Noctisaur, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE SHADOW BRAWLER POKÉMON</p>
+              <h3 id="archive-noctisaur">Noctisaur</h3>
+              <p class="evolution-types" aria-label="Dark and Fighting types">
+                <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+                <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+              </p>
+              <p class="evolution-teaser">An honorable shadow brawler whose weighted mantle turns close combat into an art.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="noxling-line" aria-labelledby="noxling-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 004</p>
+            <h2 id="noxling-line-title">The Noxling evolution line</h2>
+          </div>
+          <span class="library-hint">A TWO-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=noxling" aria-labelledby="archive-noxling" data-types="Dark,Poison" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/noxling-front.png" alt="Noxling, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE MISCHIEF POKÉMON</p>
+              <h3 id="archive-noxling">Noxling</h3>
+              <p class="evolution-types" aria-label="Dark and Poison types">
+                <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+                <span class="evolution-type-chip type-poison" data-type-name="Poison"><span aria-hidden="true">☠</span><span class="type-label">Poison</span></span>
+              </p>
+              <p class="evolution-teaser">A theatrical little bat that slips through shadows to stage harmless pranks.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=jesterror" aria-labelledby="archive-jesterror" data-types="Dark,Poison" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/jesterror-front.png" alt="Jesterror, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE ANARCHY POKÉMON</p>
+              <h3 id="archive-jesterror">Jesterror</h3>
+              <p class="evolution-types" aria-label="Dark and Poison types">
+                <span class="evolution-type-chip type-dark" data-type-name="Dark"><span aria-hidden="true">◐</span><span class="type-label">Dark</span></span>
+                <span class="evolution-type-chip type-poison" data-type-name="Poison"><span aria-hidden="true">☠</span><span class="type-label">Poison</span></span>
+              </p>
+              <p class="evolution-teaser">A sinister mastermind that turns entire cities into elaborate stages for chaos.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="oresaur-line" aria-labelledby="oresaur-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 005</p>
+            <h2 id="oresaur-line-title">The Oresaur evolution line</h2>
+          </div>
+          <span class="library-hint">A TWO-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=oresaur" aria-labelledby="archive-oresaur" data-types="Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/oresaur-front.png" alt="Oresaur, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE IRON HIDE POKÉMON</p>
+              <h3 id="archive-oresaur">Oresaur</h3>
+              <p class="evolution-types" aria-label="Steel type">
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">A heavily armoured show-off whose ambitious feats of strength often end in a tumble.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=aerosolar" aria-labelledby="archive-aerosolar" data-types="Steel,Flying" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/aerosolar-front.png" alt="Aerosolar, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE SENTINEL POKÉMON</p>
+              <h3 id="archive-aerosolar">Aerosolar</h3>
+              <p class="evolution-types" aria-label="Steel and Flying types">
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+                <span class="evolution-type-chip type-flying" data-type-name="Flying"><span aria-hidden="true">➤</span><span class="type-label">Flying</span></span>
+              </p>
+              <p class="evolution-teaser">A noble guardian that patrols its territory alongside Noctisaur to foil Jesterror's schemes.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="sirpot-line" aria-labelledby="sirpot-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 006</p>
+            <h2 id="sirpot-line-title">The Meowmet evolution line</h2>
+          </div>
+          <span class="library-hint">A TWO-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=meowmet" aria-labelledby="archive-meowmet" data-types="Fighting,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/meowmet-front.png" alt="Meowmet, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE METAL HELMET POKÉMON</p>
+              <h3 id="archive-meowmet">Meowmet</h3>
+              <p class="evolution-types" aria-label="Fighting and Steel types">
+                <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">A timid feline that found courage in a discarded pot helmet and a torn red scarf.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=sirpot" aria-labelledby="archive-sirpot" data-types="Fighting,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/sirpot-front.png" alt="Sirpot, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE IRON MASK POKÉMON</p>
+              <h3 id="archive-sirpot">Sirpot</h3>
+              <p class="evolution-types" aria-label="Fighting and Steel types">
+                <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">A disciplined brawler who reinforces its helmet and distracts foes with a flowing red scarf.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="purrvolt-line" aria-labelledby="purrvolt-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 007</p>
+            <h2 id="purrvolt-line-title">The Purrvolt evolution line</h2>
+          </div>
+          <span class="library-hint">A THREE-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=purrvolt" aria-labelledby="archive-purrvolt" data-types="Electric" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/purrvolt-front.png?v=20261107-1" alt="Purrvolt shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE PLUG TAIL POKÉMON</p>
+              <h3 id="archive-purrvolt">Purrvolt</h3>
+              <p class="evolution-types" aria-label="Electric type">
+                <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+              </p>
+              <p class="evolution-teaser">An energetic feline whose plug-shaped tail crackles with static as it recharges from outlets.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=purrserg" aria-labelledby="archive-purrserg" data-types="Electric" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/purrserg-front.png?v=20261107-1" alt="Purrserg shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE GROUNDING CABLE POKÉMON</p>
+              <h3 id="archive-purrserg">Purrserg</h3>
+              <p class="evolution-types" aria-label="Electric type">
+                <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+              </p>
+              <p class="evolution-teaser">A sleek sprinter that channels powerful jolts through its glowing claws and grounded plug tail.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=roarserg" aria-labelledby="archive-roarserg" data-types="Electric" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/roarserg-front.png?v=20261107-1" alt="Roarserg shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 3 · THE POWER GRID POKÉMON</p>
+              <h3 id="archive-roarserg">Roarserg</h3>
+              <p class="evolution-types" aria-label="Electric type">
+                <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+              </p>
+              <p class="evolution-teaser">A majestic guardian whose charged mane can keep a town powered through a blackout.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="springlet-line" aria-labelledby="springlet-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 008</p>
+            <h2 id="springlet-line-title">The Springlet evolution line</h2>
+          </div>
+          <span class="library-hint">A THREE-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=springlet" aria-labelledby="archive-springlet" data-types="Water" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/springlet-front.png" alt="Springlet, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE PRONK CALF POKÉMON</p>
+              <h3 id="archive-springlet">Springlet</h3>
+              <p class="evolution-types" aria-label="Water type">
+                <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+              </p>
+              <p class="evolution-teaser">A restless young calf that leaps about and jets water from its tail to dodge danger.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=bokhlete" aria-labelledby="archive-bokhlete" data-types="Water,Fighting" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/bokhlete-front.png" alt="Bokhlete, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE CLASHING POKÉMON</p>
+              <h3 id="archive-bokhlete">Bokhlete</h3>
+              <p class="evolution-types" aria-label="Water and Fighting types">
+                <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+                <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+              </p>
+              <p class="evolution-teaser">A fiercely competitive brawler that launches powerful tackles with jets of water.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=bokcrush" aria-labelledby="archive-bokcrush" data-types="Water,Fighting" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/bokcrush-front.png" alt="Bokcrush, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 3 · THE TITAN HORN POKÉMON</p>
+              <h3 id="archive-bokcrush">Bokcrush</h3>
+              <p class="evolution-types" aria-label="Water and Fighting types">
+                <span class="evolution-type-chip type-water" data-type-name="Water"><span aria-hidden="true">≋</span><span class="type-label">Water</span></span>
+                <span class="evolution-type-chip type-fighting" data-type-name="Fighting"><span aria-hidden="true">⬟</span><span class="type-label">Fighting</span></span>
+              </p>
+              <p class="evolution-teaser">A steadfast herd guardian that anchors itself with currents before charging through foes.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="cubolt-line" aria-labelledby="cubolt-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 009</p>
+            <h2 id="cubolt-line-title">The Cubolt evolution line</h2>
+          </div>
+          <span class="library-hint">A THREE-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=cubolt" aria-labelledby="archive-cubolt" data-types="Fire,Electric" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/cubolt-front.png" alt="Cubolt, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE SPARK CUB POKÉMON</p>
+              <h3 id="archive-cubolt">Cubolt</h3>
+              <p class="evolution-types" aria-label="Fire and Electric types">
+                <span class="evolution-type-chip type-fire" data-type-name="Fire"><span aria-hidden="true">✦</span><span class="type-label">Fire</span></span>
+                <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+              </p>
+              <p class="evolution-teaser">A playful savanna cub that charges its paws while batting a glowing volcanic stone.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=striklaw" aria-labelledby="archive-striklaw" data-types="Fire,Electric" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/striklaw-front.png" alt="Striklaw, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE FLARE MANE POKÉMON</p>
+              <h3 id="archive-striklaw">Striklaw</h3>
+              <p class="evolution-types" aria-label="Fire and Electric types">
+                <span class="evolution-type-chip type-fire" data-type-name="Fire"><span aria-hidden="true">✦</span><span class="type-label">Fire</span></span>
+                <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+              </p>
+              <p class="evolution-teaser">An agile fighter that keeps its magma stone molten with lightning-fast strikes.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=volterion" aria-labelledby="archive-volterion" data-types="Fire,Electric" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/volterion-front.png" alt="Volterion, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 3 · THE HIGH VOLTAGE POKÉMON</p>
+              <h3 id="archive-volterion">Volterion</h3>
+              <p class="evolution-types" aria-label="Fire and Electric types">
+                <span class="evolution-type-chip type-fire" data-type-name="Fire"><span aria-hidden="true">✦</span><span class="type-label">Fire</span></span>
+                <span class="evolution-type-chip type-electric" data-type-name="Electric"><span aria-hidden="true">ϟ</span><span class="type-label">Electric</span></span>
+              </p>
+              <p class="evolution-teaser">A pride leader whose flame mane and plasma kicks unleash explosive force.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="first-gmon" id="protebud-line" aria-labelledby="protebud-line-title">
+        <div class="library-heading">
+          <div>
+            <p class="tool-kicker">SPECIES NO. 010</p>
+            <h2 id="protebud-line-title">The Protebud evolution line</h2>
+          </div>
+          <span class="library-hint">A THREE-STAGE EVOLUTION</span>
+        </div>
+
+        <div class="evolution-line">
+          <a class="evolution-card" href="gmon-detail.html?stage=protebud" aria-labelledby="archive-protebud" data-types="Grass" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/protebud-front.png" alt="Protebud, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 1 · THE CLOSED BLOOM POKÉMON</p>
+              <h3 id="archive-protebud">Protebud</h3>
+              <p class="evolution-types" aria-label="Grass type">
+                <span class="evolution-type-chip type-grass" data-type-name="Grass"><span aria-hidden="true">❖</span><span class="type-label">Grass</span></span>
+              </p>
+              <p class="evolution-teaser">A shy fynbos dweller that shields itself inside a tough protea bloom and foliage.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=stembark" aria-labelledby="archive-stembark" data-types="Grass,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/stembark-front.png" alt="Stembark, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 2 · THE WILLOW-ARM POKÉMON</p>
+              <h3 id="archive-stembark">Stembark</h3>
+              <p class="evolution-types" aria-label="Grass and Steel types">
+                <span class="evolution-type-chip type-grass" data-type-name="Grass"><span aria-hidden="true">❖</span><span class="type-label">Grass</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">A sure-footed guardian that parries falling stones with its ironwood back-plank.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+          <a class="evolution-card" href="gmon-detail.html?stage=protecrick" aria-labelledby="archive-protecrick" data-types="Grass,Steel" data-page-transition>
+            <img class="evolution-art evolution-art-cutout" src="assets/protecrick-front.png" alt="Protecrick, shown from the front">
+            <div class="evolution-details">
+              <p class="evolution-stage">STAGE 3 · THE WICKET GUARD POKÉMON</p>
+              <h3 id="archive-protecrick">Protecrick</h3>
+              <p class="evolution-types" aria-label="Grass and Steel types">
+                <span class="evolution-type-chip type-grass" data-type-name="Grass"><span aria-hidden="true">❖</span><span class="type-label">Grass</span></span>
+                <span class="evolution-type-chip type-steel" data-type-name="Steel"><span aria-hidden="true">⛨</span><span class="type-label">Steel</span></span>
+              </p>
+              <p class="evolution-teaser">A stoic woodland sentry that deflects massive projectiles with its ironwood paddle.</p>
+              <span class="dex-card-link">View Dex entry <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>GM<span class="wordmark-accent">ON</span> ELEMENTAL ARCHIVE</span>
+      <a href="index.html">BACK TO THE WORLD <span aria-hidden="true">↗</span></a>
+    </footer>
+  </div>
+</body>
+</html>

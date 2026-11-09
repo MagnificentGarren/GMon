@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Explore and customize the GMon elemental type chart.">
+  <title>Type Chart — GMon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261107-1">
+  <script src="app.js" defer></script>
+  <script src="gmon-types.js" defer></script>
+  <script src="chart.js" defer></script>
+</head>
+<body class="chart-page">
+  <div class="chart-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="GMon home">
+        <span class="wordmark-icon" aria-hidden="true">G</span>
+        <span>GM<span class="wordmark-accent">ON</span></span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="site-nav-link" href="index.html" data-page-transition>Home</a>
+          <a class="site-nav-link" href="gmon.html" data-page-transition>GMon Archive</a>
+          <a class="site-nav-link is-current" href="chart.html" aria-current="page" data-page-transition>Type Matchups</a>
+        </nav>
+        <a class="home-return" href="index.html" data-page-transition><span aria-hidden="true">←</span> Back to Home</a>
+        <div class="theme-switcher" role="group" aria-label="Choose a color theme">
+          <button class="theme-button is-active" type="button" data-theme-choice="light" aria-label="Light theme" aria-pressed="true"><span class="theme-dot theme-dot-light"></span></button>
+          <button class="theme-button" type="button" data-theme-choice="dark" aria-label="Dark theme" aria-pressed="false"><span class="theme-dot theme-dot-dark"></span></button>
+          <button class="theme-button" type="button" data-theme-choice="alternate" aria-label="Alternate theme" aria-pressed="false"><span class="theme-dot theme-dot-alternate"></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="chart-intro" aria-labelledby="chart-title">
+        <div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> THE ELEMENTAL ARCHIVE</p>
+          <h1 id="chart-title">Type <span>Chart</span></h1>
+          <p class="chart-subtitle">Know your elements. Change the outcome.</p>
+        </div>
+        <div class="intro-seal" aria-hidden="true"><span>G</span><i>✦</i></div>
+      </section>
+
+      <section class="chart-tools" aria-label="Chart controls">
+        <div class="chart-tool-copy">
+          <span class="tool-kicker">MATCHUP MATRIX</span>
+          <span class="tool-hint" id="edit-hint">Attacking types down · defending types across</span>
+        </div>
+        <div class="chart-actions">
+          <button class="action-button sound-toggle" id="sound-toggle" type="button" aria-pressed="false">
+            <span class="button-icon" aria-hidden="true">♫</span><span id="sound-label">Sound off</span>
+          </button>
+          <button class="action-button reset-button" id="reset-chart" type="button">
+            <span class="button-icon" aria-hidden="true">↺</span> Reset
+          </button>
+          <button class="action-button" id="rename-types" type="button">
+            <span class="button-icon" aria-hidden="true">✎</span> Rename types
+          </button>
+          <button class="action-button edit-button" id="edit-toggle" type="button" aria-pressed="false">
+            <span class="button-icon" aria-hidden="true">✎</span><span id="edit-label">Edit chart</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="chart-legend" aria-label="Effectiveness legend">
+        <span class="legend-title">EFFECTIVENESS</span>
+        <span class="legend-item"><i class="legend-mark mark-super"></i> ×1.5 Super</span>
+        <span class="legend-item"><i class="legend-mark mark-resist"></i> ×0.67 Resisted</span>
+        <span class="legend-item"><i class="legend-mark mark-double"></i> ×0.33 Double resist</span>
+        <span class="legend-item"><i class="legend-mark mark-immune"></i> ×0 Immune</span>
+      </div>
+
+      <div class="chart-scroll" tabindex="0" aria-label="Scrollable type effectiveness matrix">
+        <table class="type-chart" id="type-chart">
+          <caption class="sr-only">Attacking type effectiveness against defending types. Turn on Edit chart to change a cell.</caption>
+          <thead id="chart-head"></thead>
+          <tbody id="chart-body"></tbody>
+        </table>
+      </div>
+
+      <div class="chart-footer">
+        <p>Click <strong>Edit chart</strong> to customize any matchup, or <strong>Rename types</strong> to personalize each element name.</p>
+        <p class="custom-types-note"><span class="sound-type-text">♪ Sound</span> &nbsp;·&nbsp; <span class="light-type-text">☼ Light</span> — GMon elements</p>
+      </div>
+    </main>
+
+    <div class="type-name-modal" id="type-name-modal" hidden>
+      <div class="type-name-panel" role="dialog" aria-modal="true" aria-labelledby="type-name-title">
+        <div class="type-name-header">
+          <div>
+            <p class="tool-kicker">CUSTOM LABELS</p>
+            <h2 id="type-name-title">Rename the type names</h2>
+          </div>
+          <button class="modal-close" id="close-type-name-modal" type="button" aria-label="Close type name editor">×</button>
+        </div>
+        <p class="type-name-description">Update how each element appears across the chart. Built-in gameplay logic stays the same.</p>
+        <div class="type-name-grid" id="type-name-grid"></div>
+        <div class="type-name-actions">
+          <button class="action-button reset-button" id="restore-type-names" type="button">Reset names</button>
+          <button class="action-button edit-button" id="save-type-names" type="button">Save names</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <span>GM<span class="wordmark-accent">ON</span> ELEMENTAL ARCHIVE</span>
+      <a href="index.html">BACK TO THE WORLD <span aria-hidden="true">↗</span></a>
+    </footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
