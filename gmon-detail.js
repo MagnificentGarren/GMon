@@ -72,6 +72,7 @@
     springlet: "springlet-line",
     cubolt: "cubolt-line",
     protebud: "protebud-line",
+    glacite: "glacite-line",
   };
   const archiveAnchor = archiveAnchors[selectedProfile.dataset.line];
   document.querySelectorAll("[data-archive-link]").forEach((link) => {

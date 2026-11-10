@@ -896,6 +896,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 .archive-result-count { color: var(--text-faint); font-size: 9px; white-space: nowrap; }
 .evolution-line { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center; gap: 16px; }
+.glacite-line .evolution-line { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .evolution-card {
   --stat-color: #b57c96;
   display: flex;
@@ -1009,7 +1010,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .evolution-timeline ol { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
 .evolution-timeline ol::before { position: absolute; top: 18px; right: 12%; left: 12%; height: 1px; background: var(--border); content: ""; }
 .evolution-timeline[data-evolution-line="paddlet"] ol,
-.evolution-timeline[data-evolution-line="noxling"] ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.evolution-timeline[data-evolution-line="noxling"] ol,
+.evolution-timeline[data-evolution-line="glacite"] ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .evolution-timeline li { position: relative; min-width: 0; }
 .evolution-timeline a { position: relative; display: flex; min-height: 78px; flex-direction: column; justify-content: center; gap: 4px; padding: 10px 12px 10px 44px; border: 1px solid var(--border); background: var(--surface); transition: border-color 180ms ease, background 180ms ease; }
 .evolution-timeline a:hover { border-color: var(--gold-line); }
@@ -1095,6 +1097,7 @@ body[data-stage="platasteel"] .evolution-timeline { --stat-color: #69aeb5; }
   .archive-hero-art img { max-height: 250px; }
   .evolution-line { flex-direction: column; align-items: stretch; }
   .evolution-line .evolution-card { flex-basis: auto; width: 100%; margin-top: 0; }
+  .glacite-line .evolution-line { grid-template-columns: minmax(0, 1fr); }
   .evolution-card { display: grid; grid-template-columns: minmax(210px, 0.85fr) minmax(0, 1.15fr); min-height: 220px; align-items: stretch; }
   .evolution-art { height: 100%; aspect-ratio: auto; }
   .dex-shell { width: calc(100% - 32px); }
