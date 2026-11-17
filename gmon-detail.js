@@ -59,8 +59,13 @@
   document.querySelectorAll(".dex-artwork").forEach((artwork) => {
     artwork.hidden = artwork.dataset.stageArtwork !== selectedStage;
   });
+  document.querySelectorAll("[data-stage-mega]").forEach((section) => {
+    section.hidden = section.dataset.stageMega !== selectedStage;
+  });
   const archiveAnchors = {
     wyrmlit: "first-gmon",
+    frostsprout: "frostsprout-line",
+    frostnib: "frostnib-line",
     paddlet: "paddlet-line",
     cloakwing: "cloakwing-line",
     noxling: "noxling-line",
@@ -73,6 +78,45 @@
     cubolt: "cubolt-line",
     protebud: "protebud-line",
     glacite: "glacite-line",
+    gleerkat: "gleerkat-line",
+    pitapop: "pitapop-line",
+    finlux: "finlux-line",
+    mothlight: "mothlight-line",
+    glimmercraw: "glimmercraw-line",
+    twinklet: "twinklet-line",
+    astravult: "twinklet-line",
+    astroraptor: "twinklet-line",
+    champup: "champup-line",
+    bramblete: "champup-line",
+    scorchlete: "champup-line",
+    marilete: "champup-line",
+    strikelete: "champup-line",
+    grapplete: "champup-line",
+    blizlete: "champup-line",
+    granilete: "champup-line",
+    archlete: "champup-line",
+    mossling: "mossling-line",
+    terraling: "mossling-line",
+    ferntomb: "mossling-line",
+    fuseling: "fuseling-line",
+    cinderling: "fuseling-line",
+    assasinder: "fuseling-line",
+    prismolith: "prismolith-line",
+    seraphlux: "prismolith-line",
+    spectragon: "prismolith-line",
+    squirken: "squirken-line",
+    tentacloak: "squirken-line",
+    shadowken: "squirken-line",
+    pandojo: "pandojo-line",
+    bambootai: "pandojo-line",
+    shinobear: "pandojo-line",
+    aeropuff: "aeropuff-line",
+    crunite: "crunite-line",
+    termivolt: "termivolt-line",
+    claymoo: "claymoo-line",
+    tubull: "claymoo-line",
+    gritgem: "gritgem-line",
+    phantrot: "phantrot-line",
   };
   const archiveAnchor = archiveAnchors[selectedProfile.dataset.line];
   document.querySelectorAll("[data-archive-link]").forEach((link) => {
