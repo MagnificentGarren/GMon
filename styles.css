@@ -1011,6 +1011,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .timeline-heading h2 { margin: 0; font-family: "Manrope", sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -0.04em; }
 .evolution-timeline ol { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
 .evolution-timeline ol::before { position: absolute; top: 18px; right: 12%; left: 12%; height: 1px; background: var(--border); content: ""; }
+.evolution-timeline[data-evolution-line="canvask"] ol::before,
+.evolution-timeline[data-evolution-line="nebulight"] ol::before { display: none; }
 .evolution-timeline[data-evolution-line="paddlet"] ol,
 .evolution-timeline[data-evolution-line="noxling"] ol,
 .evolution-timeline[data-evolution-line="glacite"] ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
